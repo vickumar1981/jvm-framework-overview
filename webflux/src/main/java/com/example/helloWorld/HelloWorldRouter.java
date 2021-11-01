@@ -14,10 +14,8 @@ import com.example.helloWorld.HelloWorldHandler;
 
 @Configuration(proxyBeanMethods = false)
 public class HelloWorldRouter {
-
     @Bean
     public RouterFunction<ServerResponse> route(HelloWorldHandler handler) {
-
         return RouterFunctions
                 .route(GET("/hello").and(accept(MediaType.APPLICATION_JSON)), handler::helloWorld);
     }

@@ -4,9 +4,13 @@ We'll take a quick look at a few popular frameworks in the JVM.
 
 This guide contains a simple hello world REST API in the following frameworks:
 
+### Java
  - [Spring Boot w/ Webflux](https://spring.io/guides/gs/reactive-rest-service/)
  - [Micronaut](https://guides.micronaut.io/latest/creating-your-first-micronaut-app-gradle-java.html)
  - [Quarkus](https://quarkus.io/guides/getting-started)
+ 
+### Scala
+ - [Play Framework](https://www.playframework.com/documentation/2.8.x/HelloWorldTutorial)
 
 
 Each application contains a single endpoint, `/hello` and has been tested
@@ -33,6 +37,7 @@ cd webflux/
 |---------|-------------------|
 |Server   |  Netty |
 |Boot time|  ~750 ms |
+|LOC      | 75 |
 
 
 ## Micronaut
@@ -50,6 +55,7 @@ cd micronaut/
 |---------|-------------------|
 |Server   |  Netty |
 |Boot time|  ~500 ms |
+|LOC      | 81 |
 
 ## Quarkus
 
@@ -64,7 +70,24 @@ cd quarkus/
 
 |Version  |  Quarkus 2.4.0|
 |---------|-------------------|
-|Server   |  Vert.x/Netty. |
+|Server   |  Vert.x/Netty |
 |Boot time|  ~1.2 s |
+|LOC      | 71 |
 
+## Play Framework
+
+To run, change into the `play` directory and run the application.
+
+```shell
+cd play/
+./sbt run
+```
+
+### Details
+
+|Version  |  Play 2.8.8|
+|---------|-------------------|
+|Server   |  Akka HTTP |
+|Boot time|  - |
+|LOC      | 22 |
 
