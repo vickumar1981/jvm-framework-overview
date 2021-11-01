@@ -11,6 +11,7 @@ This guide contains a simple hello world REST API in the following frameworks:
  
 ### Scala
  - [Play Framework](https://www.playframework.com/documentation/2.8.x/HelloWorldTutorial)
+ - [Finch + Finagle](https://twitter.github.io/finagle/guide/Quickstart.html)
 
 
 Each application contains a single endpoint, `/hello` and has been tested
@@ -24,10 +25,11 @@ and running the application in development mode.
 
 ## Spring Boot w/ WebFlux
 
-To run, change into the `webflux` directory and run the application.
+To run, change into the `webflux` directory, compile and run the application.
 
 ```shell
 cd webflux/
+./gradlew clean build
 ./gradlew bootRun
 ```
 
@@ -42,10 +44,11 @@ cd webflux/
 
 ## Micronaut
 
-To run, change into the `micronaut` directory and run the application.
+To run, change into the `micronaut` directory, compile and run the application.
 
 ```shell
 cd micronaut/
+./graldew clean build
 ./gradlew run
 ```
 
@@ -59,7 +62,7 @@ cd micronaut/
 
 ## Quarkus
 
-To run, change into the `quarkus` directory and run the application.
+To run, change into the `quarkus` directory, compile and run the application.
 
 ```shell
 cd quarkus/
@@ -80,6 +83,7 @@ To run, change into the `play` directory and run the application.
 
 ```shell
 cd play/
+./sbt compile
 ./sbt run
 ```
 
@@ -90,4 +94,23 @@ cd play/
 |Server   |  Akka HTTP |
 |Boot time|  - |
 |LOC      | 22 |
+
+
+## Finch + Finagle
+
+To run, change into the `finch` directory and run the application.
+
+```shell
+cd finch/
+./sbt compile
+./sbt run
+```
+
+### Details
+
+|Version  |  Finch 0.31|
+|---------|-------------------|
+|Server   |  Finagle 19.8.0 |
+|Boot time|  - |
+|LOC      | 14 |
 
